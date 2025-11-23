@@ -1,0 +1,279 @@
+{
+  "id": "scenario-006",
+  "incident_type": "message_queue_backlog",
+  "severity": "low",
+  "incident_report": "Order confirmations delayed around 04:30 UTC; background jobs are lagging behind.",
+  "time_hint": "2025-01-20T04:30:00Z",
+  "logs": [
+    {
+      "id": 9,
+      "timestamp": "2025-01-20T04:25:27Z",
+      "service": "checkout-web",
+      "level": "WARN",
+      "trace_id": "trace-scenario-006-2",
+      "message": "checkout-web observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-01-20T04:25:29Z",
+      "service": "cache-redis",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "cache-redis handled request normally",
+      "context": null
+    },
+    {
+      "id": 15,
+      "timestamp": "2025-01-20T04:25:41Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": "trace-scenario-006-1",
+      "message": "payments-api handled request normally",
+      "context": null
+    },
+    {
+      "id": 19,
+      "timestamp": "2025-01-20T04:26:57Z",
+      "service": "auth-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-006-1",
+      "message": "auth-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 16,
+      "timestamp": "2025-01-20T04:27:36Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-006-1",
+      "message": "inventory-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 10,
+      "timestamp": "2025-01-20T04:28:06Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": "trace-scenario-006-1",
+      "message": "payments-api handled request normally",
+      "context": null
+    },
+    {
+      "id": 25,
+      "timestamp": "2025-01-20T04:28:21Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-006-2",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 5,
+      "timestamp": "2025-01-20T04:28:45Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": "trace-scenario-006-2",
+      "message": "gateway handled request normally",
+      "context": null
+    },
+    {
+      "id": 24,
+      "timestamp": "2025-01-20T04:29:01Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-006-3",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 21,
+      "timestamp": "2025-01-20T04:29:41Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-006-1",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 22,
+      "timestamp": "2025-01-20T04:30:04Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-006-1",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 20,
+      "timestamp": "2025-01-20T04:30:19Z",
+      "service": "cache-redis",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "cache-redis handled request normally",
+      "context": null
+    },
+    {
+      "id": 23,
+      "timestamp": "2025-01-20T04:30:34Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-006-3",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 29,
+      "timestamp": "2025-01-20T04:30:54Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-006-1",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 14,
+      "timestamp": "2025-01-20T04:30:58Z",
+      "service": "inventory-service",
+      "level": "WARN",
+      "trace_id": "trace-scenario-006-3",
+      "message": "inventory-service observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-01-20T04:31:00Z",
+      "service": "orders-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "orders-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 27,
+      "timestamp": "2025-01-20T04:31:09Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-006-1",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 18,
+      "timestamp": "2025-01-20T04:31:17Z",
+      "service": "auth-service",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "auth-service observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 12,
+      "timestamp": "2025-01-20T04:31:28Z",
+      "service": "orders-worker",
+      "level": "INFO",
+      "trace_id": "trace-scenario-006-1",
+      "message": "orders-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 30,
+      "timestamp": "2025-01-20T04:31:35Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-006-2",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-01-20T04:31:38Z",
+      "service": "payments-api",
+      "level": "WARN",
+      "trace_id": "trace-scenario-006-1",
+      "message": "payments-api observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 7,
+      "timestamp": "2025-01-20T04:31:54Z",
+      "service": "auth-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "auth-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-01-20T04:32:09Z",
+      "service": "queue-worker",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "queue-worker observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 28,
+      "timestamp": "2025-01-20T04:32:19Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-006-3",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 26,
+      "timestamp": "2025-01-20T04:32:32Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-006-2",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 11,
+      "timestamp": "2025-01-20T04:32:45Z",
+      "service": "db-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "db-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 1,
+      "timestamp": "2025-01-20T04:32:57Z",
+      "service": "cache-redis",
+      "level": "INFO",
+      "trace_id": "trace-scenario-006-2",
+      "message": "cache-redis handled request normally",
+      "context": null
+    },
+    {
+      "id": 13,
+      "timestamp": "2025-01-20T04:33:01Z",
+      "service": "payments-api",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "payments-api observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 8,
+      "timestamp": "2025-01-20T04:34:06Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api handled request normally",
+      "context": null
+    },
+    {
+      "id": 17,
+      "timestamp": "2025-01-20T04:34:37Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "inventory-service handled request normally",
+      "context": null
+    }
+  ]
+}

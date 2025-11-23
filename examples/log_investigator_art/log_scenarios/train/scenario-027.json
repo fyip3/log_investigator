@@ -1,0 +1,1989 @@
+{
+  "id": "scenario-027",
+  "incident_type": "cache_cluster_partial_outage",
+  "severity": "medium",
+  "incident_report": "Site feels slow \u2013 cache hit rate dropped around 06:05 UTC.",
+  "time_hint": "2025-01-20T08:25:00Z",
+  "logs": [
+    {
+      "id": 1,
+      "timestamp": "2025-01-20T08:20:12Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "checkout-web refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-01-20T08:20:15Z",
+      "service": "auth-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-3",
+      "message": "auth-service metrics flush complete",
+      "context": null
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-01-20T08:20:18Z",
+      "service": "cache-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "cache-service completed background task",
+      "context": null
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-01-20T08:20:23Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway metrics flush complete",
+      "context": null
+    },
+    {
+      "id": 5,
+      "timestamp": "2025-01-20T08:20:28Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-4",
+      "message": "queue-worker heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-01-20T08:20:34Z",
+      "service": "gateway",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "gateway slow response from dependency",
+      "context": null
+    },
+    {
+      "id": 7,
+      "timestamp": "2025-01-20T08:20:39Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "queue-worker healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 8,
+      "timestamp": "2025-01-20T08:20:53Z",
+      "service": "cache-service",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "cache-service received intermittent 5xx from upstream",
+      "context": null
+    },
+    {
+      "id": 9,
+      "timestamp": "2025-01-20T08:21:03Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway handled request normally",
+      "context": null
+    },
+    {
+      "id": 10,
+      "timestamp": "2025-01-20T08:21:18Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-4",
+      "message": "payments-api processed batch job",
+      "context": null
+    },
+    {
+      "id": 11,
+      "timestamp": "2025-01-20T08:21:22Z",
+      "service": "cache-service",
+      "level": "WARN",
+      "trace_id": "trace-scenario-027-2",
+      "message": "cache-service received intermittent 5xx from upstream",
+      "context": null
+    },
+    {
+      "id": 12,
+      "timestamp": "2025-01-20T08:21:25Z",
+      "service": "cache-service",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "cache-service slow response from dependency",
+      "context": null
+    },
+    {
+      "id": 13,
+      "timestamp": "2025-01-20T08:21:31Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 14,
+      "timestamp": "2025-01-20T08:21:39Z",
+      "service": "search-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-4",
+      "message": "search-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 15,
+      "timestamp": "2025-01-20T08:21:51Z",
+      "service": "db-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "db-service completed background task",
+      "context": null
+    },
+    {
+      "id": 16,
+      "timestamp": "2025-01-20T08:21:54Z",
+      "service": "payments-api",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-3",
+      "message": "payments-api ERROR failed to acquire lock from cache",
+      "context": null
+    },
+    {
+      "id": 17,
+      "timestamp": "2025-01-20T08:22:04Z",
+      "service": "payments-api",
+      "level": "WARN",
+      "trace_id": "trace-scenario-027-1",
+      "message": "payments-api observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 18,
+      "timestamp": "2025-01-20T08:22:11Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-2",
+      "message": "payments-api completed background task",
+      "context": null
+    },
+    {
+      "id": 19,
+      "timestamp": "2025-01-20T08:22:23Z",
+      "service": "auth-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "auth-service refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 20,
+      "timestamp": "2025-01-20T08:22:33Z",
+      "service": "db-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "db-service refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 21,
+      "timestamp": "2025-01-20T08:22:39Z",
+      "service": "auth-service",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "auth-service retrying request to upstream",
+      "context": null
+    },
+    {
+      "id": 22,
+      "timestamp": "2025-01-20T08:22:49Z",
+      "service": "cache-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-1",
+      "message": "cache-service processed batch job",
+      "context": null
+    },
+    {
+      "id": 23,
+      "timestamp": "2025-01-20T08:22:58Z",
+      "service": "queue-worker",
+      "level": "WARN",
+      "trace_id": "trace-scenario-027-2",
+      "message": "queue-worker received intermittent 5xx from upstream",
+      "context": null
+    },
+    {
+      "id": 24,
+      "timestamp": "2025-01-20T08:23:07Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway handled request normally",
+      "context": null
+    },
+    {
+      "id": 25,
+      "timestamp": "2025-01-20T08:23:16Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "inventory-service completed background task",
+      "context": null
+    },
+    {
+      "id": 26,
+      "timestamp": "2025-01-20T08:23:23Z",
+      "service": "cache-service",
+      "level": "ERROR",
+      "trace_id": null,
+      "message": "cache-service ERROR timeout talking to upstream service",
+      "context": null
+    },
+    {
+      "id": 27,
+      "timestamp": "2025-01-20T08:23:32Z",
+      "service": "cache-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "cache-service refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 28,
+      "timestamp": "2025-01-20T08:23:35Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-1",
+      "message": "gateway refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 29,
+      "timestamp": "2025-01-20T08:23:44Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "inventory-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 30,
+      "timestamp": "2025-01-20T08:23:53Z",
+      "service": "notifications-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "notifications-service metrics flush complete",
+      "context": null
+    },
+    {
+      "id": 31,
+      "timestamp": "2025-01-20T08:24:00Z",
+      "service": "notifications-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "notifications-service metrics flush complete",
+      "context": null
+    },
+    {
+      "id": 32,
+      "timestamp": "2025-01-20T08:24:06Z",
+      "service": "gateway",
+      "level": "ERROR",
+      "trace_id": null,
+      "message": "gateway ERROR transient network failure, retrying",
+      "context": null
+    },
+    {
+      "id": 33,
+      "timestamp": "2025-01-20T08:24:10Z",
+      "service": "db-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "db-service completed background task",
+      "context": null
+    },
+    {
+      "id": 34,
+      "timestamp": "2025-01-20T08:24:23Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "queue-worker refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 35,
+      "timestamp": "2025-01-20T08:24:32Z",
+      "service": "db-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-4",
+      "message": "db-service processed batch job",
+      "context": null
+    },
+    {
+      "id": 36,
+      "timestamp": "2025-01-20T08:24:42Z",
+      "service": "notifications-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "notifications-service heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 37,
+      "timestamp": "2025-01-20T08:24:50Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-4",
+      "message": "inventory-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 38,
+      "timestamp": "2025-01-20T08:24:57Z",
+      "service": "search-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-2",
+      "message": "search-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 39,
+      "timestamp": "2025-01-20T08:25:08Z",
+      "service": "checkout-web",
+      "level": "WARN",
+      "trace_id": "trace-scenario-027-1",
+      "message": "checkout-web slow response from dependency",
+      "context": null
+    },
+    {
+      "id": 40,
+      "timestamp": "2025-01-20T08:25:12Z",
+      "service": "search-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-1",
+      "message": "search-service ERROR transient network failure, retrying",
+      "context": null
+    },
+    {
+      "id": 41,
+      "timestamp": "2025-01-20T08:25:15Z",
+      "service": "notifications-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "notifications-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 42,
+      "timestamp": "2025-01-20T08:25:21Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 43,
+      "timestamp": "2025-01-20T08:25:29Z",
+      "service": "notifications-service",
+      "level": "WARN",
+      "trace_id": "trace-scenario-027-1",
+      "message": "notifications-service observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 44,
+      "timestamp": "2025-01-20T08:25:35Z",
+      "service": "db-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "db-service healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 45,
+      "timestamp": "2025-01-20T08:25:46Z",
+      "service": "cache-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-2",
+      "message": "cache-service WARN cache miss storm detected; falling back to database",
+      "context": null
+    },
+    {
+      "id": 46,
+      "timestamp": "2025-01-20T08:25:57Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api completed background task",
+      "context": null
+    },
+    {
+      "id": 47,
+      "timestamp": "2025-01-20T08:26:10Z",
+      "service": "search-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-3",
+      "message": "search-service refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 48,
+      "timestamp": "2025-01-20T08:26:13Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api processed batch job",
+      "context": null
+    },
+    {
+      "id": 49,
+      "timestamp": "2025-01-20T08:26:25Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api metrics flush complete",
+      "context": null
+    },
+    {
+      "id": 50,
+      "timestamp": "2025-01-20T08:26:37Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api processed batch job",
+      "context": null
+    },
+    {
+      "id": 51,
+      "timestamp": "2025-01-20T08:26:41Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api handled request normally",
+      "context": null
+    },
+    {
+      "id": 52,
+      "timestamp": "2025-01-20T08:26:47Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "inventory-service refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 53,
+      "timestamp": "2025-01-20T08:26:56Z",
+      "service": "search-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "search-service healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 54,
+      "timestamp": "2025-01-20T08:27:01Z",
+      "service": "auth-service",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "auth-service received intermittent 5xx from upstream",
+      "context": null
+    },
+    {
+      "id": 55,
+      "timestamp": "2025-01-20T08:27:09Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-4",
+      "message": "payments-api healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 56,
+      "timestamp": "2025-01-20T08:27:16Z",
+      "service": "checkout-web",
+      "level": "WARN",
+      "trace_id": "trace-scenario-027-4",
+      "message": "checkout-web observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 57,
+      "timestamp": "2025-01-20T08:27:27Z",
+      "service": "search-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-1",
+      "message": "search-service processed batch job",
+      "context": null
+    },
+    {
+      "id": 58,
+      "timestamp": "2025-01-20T08:27:30Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "queue-worker metrics flush complete",
+      "context": null
+    },
+    {
+      "id": 59,
+      "timestamp": "2025-01-20T08:27:45Z",
+      "service": "auth-service",
+      "level": "ERROR",
+      "trace_id": null,
+      "message": "auth-service ERROR timeout talking to upstream service",
+      "context": null
+    },
+    {
+      "id": 60,
+      "timestamp": "2025-01-20T08:27:54Z",
+      "service": "cache-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-1",
+      "message": "cache-service WARN cache miss storm detected; falling back to database",
+      "context": null
+    },
+    {
+      "id": 61,
+      "timestamp": "2025-01-20T08:27:59Z",
+      "service": "search-service",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "search-service temporary spike in error rate, monitoring",
+      "context": null
+    },
+    {
+      "id": 62,
+      "timestamp": "2025-01-20T08:28:14Z",
+      "service": "gateway",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-3",
+      "message": "gateway ERROR connection reset by peer",
+      "context": null
+    },
+    {
+      "id": 63,
+      "timestamp": "2025-01-20T08:28:24Z",
+      "service": "search-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "search-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 64,
+      "timestamp": "2025-01-20T08:28:35Z",
+      "service": "payments-api",
+      "level": "ERROR",
+      "trace_id": null,
+      "message": "payments-api ERROR unexpected 500 from upstream dependency",
+      "context": null
+    },
+    {
+      "id": 65,
+      "timestamp": "2025-01-20T08:28:39Z",
+      "service": "queue-worker",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "queue-worker observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 66,
+      "timestamp": "2025-01-20T08:28:54Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 67,
+      "timestamp": "2025-01-20T08:29:08Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway completed background task",
+      "context": null
+    },
+    {
+      "id": 68,
+      "timestamp": "2025-01-20T08:29:21Z",
+      "service": "auth-service",
+      "level": "ERROR",
+      "trace_id": null,
+      "message": "auth-service ERROR connection reset by peer",
+      "context": null
+    },
+    {
+      "id": 69,
+      "timestamp": "2025-01-20T08:29:35Z",
+      "service": "search-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-3",
+      "message": "search-service processed batch job",
+      "context": null
+    },
+    {
+      "id": 70,
+      "timestamp": "2025-01-20T08:29:41Z",
+      "service": "cache-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "cache-service refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 71,
+      "timestamp": "2025-01-20T08:29:53Z",
+      "service": "notifications-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "notifications-service healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 72,
+      "timestamp": "2025-01-20T08:30:03Z",
+      "service": "notifications-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-1",
+      "message": "notifications-service refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 73,
+      "timestamp": "2025-01-20T08:30:07Z",
+      "service": "gateway",
+      "level": "ERROR",
+      "trace_id": null,
+      "message": "gateway ERROR unexpected 500 from upstream dependency",
+      "context": null
+    },
+    {
+      "id": 74,
+      "timestamp": "2025-01-20T08:30:16Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 75,
+      "timestamp": "2025-01-20T08:30:31Z",
+      "service": "notifications-service",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "notifications-service observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 76,
+      "timestamp": "2025-01-20T08:30:40Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "checkout-web handled request normally",
+      "context": null
+    },
+    {
+      "id": 77,
+      "timestamp": "2025-01-20T08:30:48Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-4",
+      "message": "inventory-service healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 78,
+      "timestamp": "2025-01-20T08:31:00Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "inventory-service completed background task",
+      "context": null
+    },
+    {
+      "id": 79,
+      "timestamp": "2025-01-20T08:31:15Z",
+      "service": "cache-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "cache-service healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 80,
+      "timestamp": "2025-01-20T08:31:26Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway metrics flush complete",
+      "context": null
+    },
+    {
+      "id": 81,
+      "timestamp": "2025-01-20T08:31:38Z",
+      "service": "notifications-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-3",
+      "message": "notifications-service heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 82,
+      "timestamp": "2025-01-20T08:31:52Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-2",
+      "message": "checkout-web metrics flush complete",
+      "context": null
+    },
+    {
+      "id": 83,
+      "timestamp": "2025-01-20T08:32:01Z",
+      "service": "cache-service",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "cache-service temporary spike in error rate, monitoring",
+      "context": null
+    },
+    {
+      "id": 84,
+      "timestamp": "2025-01-20T08:32:15Z",
+      "service": "auth-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "auth-service completed background task",
+      "context": null
+    },
+    {
+      "id": 85,
+      "timestamp": "2025-01-20T08:32:25Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "checkout-web heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 86,
+      "timestamp": "2025-01-20T08:32:33Z",
+      "service": "auth-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-1",
+      "message": "auth-service refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 87,
+      "timestamp": "2025-01-20T08:32:46Z",
+      "service": "cache-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-2",
+      "message": "cache-service WARN cache miss storm detected; falling back to database",
+      "context": null
+    },
+    {
+      "id": 88,
+      "timestamp": "2025-01-20T08:32:59Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway metrics flush complete",
+      "context": null
+    },
+    {
+      "id": 89,
+      "timestamp": "2025-01-20T08:33:10Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-1",
+      "message": "checkout-web refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 90,
+      "timestamp": "2025-01-20T08:33:13Z",
+      "service": "cache-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "cache-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 91,
+      "timestamp": "2025-01-20T08:33:22Z",
+      "service": "search-service",
+      "level": "ERROR",
+      "trace_id": null,
+      "message": "search-service ERROR transient network failure, retrying",
+      "context": null
+    },
+    {
+      "id": 92,
+      "timestamp": "2025-01-20T08:33:35Z",
+      "service": "notifications-service",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "notifications-service slow response from dependency",
+      "context": null
+    },
+    {
+      "id": 93,
+      "timestamp": "2025-01-20T08:33:49Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": null,
+      "message": "checkout-web ERROR unexpected 500 from upstream dependency",
+      "context": null
+    },
+    {
+      "id": 94,
+      "timestamp": "2025-01-20T08:33:58Z",
+      "service": "checkout-web",
+      "level": "WARN",
+      "trace_id": "trace-scenario-027-2",
+      "message": "checkout-web observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 95,
+      "timestamp": "2025-01-20T08:34:06Z",
+      "service": "search-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "search-service heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 96,
+      "timestamp": "2025-01-20T08:34:12Z",
+      "service": "cache-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-2",
+      "message": "cache-service WARN cache miss storm detected; falling back to database",
+      "context": null
+    },
+    {
+      "id": 97,
+      "timestamp": "2025-01-20T08:34:21Z",
+      "service": "search-service",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "search-service received intermittent 5xx from upstream",
+      "context": null
+    },
+    {
+      "id": 98,
+      "timestamp": "2025-01-20T08:34:25Z",
+      "service": "notifications-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-2",
+      "message": "notifications-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 99,
+      "timestamp": "2025-01-20T08:34:34Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway completed background task",
+      "context": null
+    },
+    {
+      "id": 100,
+      "timestamp": "2025-01-20T08:34:44Z",
+      "service": "queue-worker",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "queue-worker temporary spike in error rate, monitoring",
+      "context": null
+    },
+    {
+      "id": 101,
+      "timestamp": "2025-01-20T08:34:57Z",
+      "service": "notifications-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "notifications-service processed batch job",
+      "context": null
+    },
+    {
+      "id": 102,
+      "timestamp": "2025-01-20T08:35:00Z",
+      "service": "search-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "search-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 103,
+      "timestamp": "2025-01-20T08:35:14Z",
+      "service": "db-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-4",
+      "message": "db-service processed batch job",
+      "context": null
+    },
+    {
+      "id": 104,
+      "timestamp": "2025-01-20T08:35:28Z",
+      "service": "cache-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "cache-service heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 105,
+      "timestamp": "2025-01-20T08:35:37Z",
+      "service": "cache-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-4",
+      "message": "cache-service WARN cache miss storm detected; falling back to database",
+      "context": null
+    },
+    {
+      "id": 106,
+      "timestamp": "2025-01-20T08:35:44Z",
+      "service": "search-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-3",
+      "message": "search-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 107,
+      "timestamp": "2025-01-20T08:35:47Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 108,
+      "timestamp": "2025-01-20T08:35:56Z",
+      "service": "auth-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "auth-service completed background task",
+      "context": null
+    },
+    {
+      "id": 109,
+      "timestamp": "2025-01-20T08:36:07Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-4",
+      "message": "checkout-web processed batch job",
+      "context": null
+    },
+    {
+      "id": 110,
+      "timestamp": "2025-01-20T08:36:14Z",
+      "service": "search-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "search-service healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 111,
+      "timestamp": "2025-01-20T08:36:27Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 112,
+      "timestamp": "2025-01-20T08:36:34Z",
+      "service": "payments-api",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-4",
+      "message": "payments-api ERROR timeout talking to upstream service",
+      "context": null
+    },
+    {
+      "id": 113,
+      "timestamp": "2025-01-20T08:36:44Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "inventory-service completed background task",
+      "context": null
+    },
+    {
+      "id": 114,
+      "timestamp": "2025-01-20T08:36:56Z",
+      "service": "cache-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-1",
+      "message": "cache-service processed batch job",
+      "context": null
+    },
+    {
+      "id": 115,
+      "timestamp": "2025-01-20T08:37:05Z",
+      "service": "cache-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "cache-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 116,
+      "timestamp": "2025-01-20T08:37:12Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 117,
+      "timestamp": "2025-01-20T08:37:16Z",
+      "service": "cache-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-3",
+      "message": "cache-service WARN cache miss storm detected; falling back to database",
+      "context": null
+    },
+    {
+      "id": 118,
+      "timestamp": "2025-01-20T08:37:26Z",
+      "service": "auth-service",
+      "level": "ERROR",
+      "trace_id": null,
+      "message": "auth-service ERROR timeout talking to upstream service",
+      "context": null
+    },
+    {
+      "id": 119,
+      "timestamp": "2025-01-20T08:37:29Z",
+      "service": "cache-service",
+      "level": "ERROR",
+      "trace_id": null,
+      "message": "cache-service ERROR timeout talking to upstream service",
+      "context": null
+    },
+    {
+      "id": 120,
+      "timestamp": "2025-01-20T08:37:41Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-1",
+      "message": "checkout-web healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 121,
+      "timestamp": "2025-01-20T08:37:52Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api metrics flush complete",
+      "context": null
+    },
+    {
+      "id": 122,
+      "timestamp": "2025-01-20T08:38:01Z",
+      "service": "notifications-service",
+      "level": "ERROR",
+      "trace_id": null,
+      "message": "notifications-service ERROR unexpected 500 from upstream dependency",
+      "context": null
+    },
+    {
+      "id": 123,
+      "timestamp": "2025-01-20T08:38:10Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": null,
+      "message": "queue-worker ERROR unexpected 500 from upstream dependency",
+      "context": null
+    },
+    {
+      "id": 124,
+      "timestamp": "2025-01-20T08:38:18Z",
+      "service": "db-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "db-service processed batch job",
+      "context": null
+    },
+    {
+      "id": 125,
+      "timestamp": "2025-01-20T08:38:29Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "queue-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 126,
+      "timestamp": "2025-01-20T08:38:41Z",
+      "service": "cache-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-1",
+      "message": "cache-service heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 127,
+      "timestamp": "2025-01-20T08:38:51Z",
+      "service": "db-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "db-service metrics flush complete",
+      "context": null
+    },
+    {
+      "id": 128,
+      "timestamp": "2025-01-20T08:38:59Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 129,
+      "timestamp": "2025-01-20T08:39:05Z",
+      "service": "db-service",
+      "level": "WARN",
+      "trace_id": "trace-scenario-027-3",
+      "message": "db-service received intermittent 5xx from upstream",
+      "context": null
+    },
+    {
+      "id": 130,
+      "timestamp": "2025-01-20T08:39:15Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-2",
+      "message": "payments-api completed background task",
+      "context": null
+    },
+    {
+      "id": 131,
+      "timestamp": "2025-01-20T08:39:26Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "queue-worker heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 132,
+      "timestamp": "2025-01-20T08:39:38Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "checkout-web completed background task",
+      "context": null
+    },
+    {
+      "id": 133,
+      "timestamp": "2025-01-20T08:39:50Z",
+      "service": "payments-api",
+      "level": "ERROR",
+      "trace_id": null,
+      "message": "payments-api ERROR failed to acquire lock from cache",
+      "context": null
+    },
+    {
+      "id": 134,
+      "timestamp": "2025-01-20T08:39:56Z",
+      "service": "auth-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "auth-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 135,
+      "timestamp": "2025-01-20T08:40:01Z",
+      "service": "inventory-service",
+      "level": "ERROR",
+      "trace_id": null,
+      "message": "inventory-service ERROR failed to acquire lock from cache",
+      "context": null
+    },
+    {
+      "id": 136,
+      "timestamp": "2025-01-20T08:40:05Z",
+      "service": "cache-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-1",
+      "message": "cache-service WARN cache miss storm detected; falling back to database",
+      "context": null
+    },
+    {
+      "id": 137,
+      "timestamp": "2025-01-20T08:40:12Z",
+      "service": "inventory-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-3",
+      "message": "inventory-service ERROR transient network failure, retrying",
+      "context": null
+    },
+    {
+      "id": 138,
+      "timestamp": "2025-01-20T08:40:20Z",
+      "service": "checkout-web",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "checkout-web retrying request to upstream",
+      "context": null
+    },
+    {
+      "id": 139,
+      "timestamp": "2025-01-20T08:40:25Z",
+      "service": "cache-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-2",
+      "message": "cache-service WARN cache miss storm detected; falling back to database",
+      "context": null
+    },
+    {
+      "id": 140,
+      "timestamp": "2025-01-20T08:40:40Z",
+      "service": "search-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "search-service healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 141,
+      "timestamp": "2025-01-20T08:40:48Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": null,
+      "message": "db-service ERROR timeout talking to upstream service",
+      "context": null
+    },
+    {
+      "id": 142,
+      "timestamp": "2025-01-20T08:40:51Z",
+      "service": "cache-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-1",
+      "message": "cache-service WARN cache miss storm detected; falling back to database",
+      "context": null
+    },
+    {
+      "id": 143,
+      "timestamp": "2025-01-20T08:40:56Z",
+      "service": "cache-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "cache-service processed batch job",
+      "context": null
+    },
+    {
+      "id": 144,
+      "timestamp": "2025-01-20T08:41:02Z",
+      "service": "notifications-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-3",
+      "message": "notifications-service completed background task",
+      "context": null
+    },
+    {
+      "id": 145,
+      "timestamp": "2025-01-20T08:41:12Z",
+      "service": "inventory-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-1",
+      "message": "inventory-service ERROR timeout talking to upstream service",
+      "context": null
+    },
+    {
+      "id": 146,
+      "timestamp": "2025-01-20T08:41:22Z",
+      "service": "cache-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-4",
+      "message": "cache-service metrics flush complete",
+      "context": null
+    },
+    {
+      "id": 147,
+      "timestamp": "2025-01-20T08:41:30Z",
+      "service": "cache-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-4",
+      "message": "cache-service WARN cache miss storm detected; falling back to database",
+      "context": null
+    },
+    {
+      "id": 148,
+      "timestamp": "2025-01-20T08:41:34Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api processed batch job",
+      "context": null
+    },
+    {
+      "id": 149,
+      "timestamp": "2025-01-20T08:41:43Z",
+      "service": "cache-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-2",
+      "message": "cache-service WARN cache miss storm detected; falling back to database",
+      "context": null
+    },
+    {
+      "id": 150,
+      "timestamp": "2025-01-20T08:41:53Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api handled request normally",
+      "context": null
+    },
+    {
+      "id": 151,
+      "timestamp": "2025-01-20T08:41:56Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 152,
+      "timestamp": "2025-01-20T08:42:09Z",
+      "service": "search-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "search-service refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 153,
+      "timestamp": "2025-01-20T08:42:22Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "inventory-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 154,
+      "timestamp": "2025-01-20T08:42:30Z",
+      "service": "auth-service",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "auth-service slow response from dependency",
+      "context": null
+    },
+    {
+      "id": 155,
+      "timestamp": "2025-01-20T08:42:38Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-4",
+      "message": "inventory-service refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 156,
+      "timestamp": "2025-01-20T08:42:49Z",
+      "service": "search-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "search-service refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 157,
+      "timestamp": "2025-01-20T08:42:53Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api completed background task",
+      "context": null
+    },
+    {
+      "id": 158,
+      "timestamp": "2025-01-20T08:43:03Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "queue-worker metrics flush complete",
+      "context": null
+    },
+    {
+      "id": 159,
+      "timestamp": "2025-01-20T08:43:14Z",
+      "service": "notifications-service",
+      "level": "ERROR",
+      "trace_id": null,
+      "message": "notifications-service ERROR failed to acquire lock from cache",
+      "context": null
+    },
+    {
+      "id": 160,
+      "timestamp": "2025-01-20T08:43:19Z",
+      "service": "cache-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "cache-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 161,
+      "timestamp": "2025-01-20T08:43:33Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": null,
+      "message": "checkout-web ERROR failed to acquire lock from cache",
+      "context": null
+    },
+    {
+      "id": 162,
+      "timestamp": "2025-01-20T08:43:40Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-1",
+      "message": "gateway heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 163,
+      "timestamp": "2025-01-20T08:43:53Z",
+      "service": "cache-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-3",
+      "message": "cache-service WARN cache miss storm detected; falling back to database",
+      "context": null
+    },
+    {
+      "id": 164,
+      "timestamp": "2025-01-20T08:43:58Z",
+      "service": "cache-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "cache-service refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 165,
+      "timestamp": "2025-01-20T08:44:09Z",
+      "service": "notifications-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "notifications-service healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 166,
+      "timestamp": "2025-01-20T08:44:15Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "inventory-service healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 167,
+      "timestamp": "2025-01-20T08:44:18Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-2",
+      "message": "queue-worker metrics flush complete",
+      "context": null
+    },
+    {
+      "id": 168,
+      "timestamp": "2025-01-20T08:44:32Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-2",
+      "message": "payments-api handled request normally",
+      "context": null
+    },
+    {
+      "id": 169,
+      "timestamp": "2025-01-20T08:44:46Z",
+      "service": "inventory-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-2",
+      "message": "inventory-service ERROR failed to acquire lock from cache",
+      "context": null
+    },
+    {
+      "id": 170,
+      "timestamp": "2025-01-20T08:44:56Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-3",
+      "message": "queue-worker refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 171,
+      "timestamp": "2025-01-20T08:45:10Z",
+      "service": "notifications-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "notifications-service completed background task",
+      "context": null
+    },
+    {
+      "id": 172,
+      "timestamp": "2025-01-20T08:45:22Z",
+      "service": "search-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "search-service heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 173,
+      "timestamp": "2025-01-20T08:45:25Z",
+      "service": "cache-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-2",
+      "message": "cache-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 174,
+      "timestamp": "2025-01-20T08:45:36Z",
+      "service": "notifications-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-1",
+      "message": "notifications-service ERROR unexpected 500 from upstream dependency",
+      "context": null
+    },
+    {
+      "id": 175,
+      "timestamp": "2025-01-20T08:45:41Z",
+      "service": "notifications-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-1",
+      "message": "notifications-service healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 176,
+      "timestamp": "2025-01-20T08:45:55Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "checkout-web healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 177,
+      "timestamp": "2025-01-20T08:46:01Z",
+      "service": "payments-api",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "payments-api slow response from dependency",
+      "context": null
+    },
+    {
+      "id": 178,
+      "timestamp": "2025-01-20T08:46:10Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-2",
+      "message": "checkout-web handled request normally",
+      "context": null
+    },
+    {
+      "id": 179,
+      "timestamp": "2025-01-20T08:46:19Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-1",
+      "message": "payments-api heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 180,
+      "timestamp": "2025-01-20T08:46:33Z",
+      "service": "search-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "search-service completed background task",
+      "context": null
+    },
+    {
+      "id": 181,
+      "timestamp": "2025-01-20T08:46:36Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "checkout-web refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 182,
+      "timestamp": "2025-01-20T08:46:47Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-4",
+      "message": "checkout-web completed background task",
+      "context": null
+    },
+    {
+      "id": 183,
+      "timestamp": "2025-01-20T08:46:56Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": null,
+      "message": "db-service ERROR timeout talking to upstream service",
+      "context": null
+    },
+    {
+      "id": 184,
+      "timestamp": "2025-01-20T08:47:10Z",
+      "service": "notifications-service",
+      "level": "WARN",
+      "trace_id": "trace-scenario-027-1",
+      "message": "notifications-service observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 185,
+      "timestamp": "2025-01-20T08:47:16Z",
+      "service": "queue-worker",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "queue-worker retrying request to upstream",
+      "context": null
+    },
+    {
+      "id": 186,
+      "timestamp": "2025-01-20T08:47:25Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "checkout-web heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 187,
+      "timestamp": "2025-01-20T08:47:38Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-1",
+      "message": "checkout-web refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 188,
+      "timestamp": "2025-01-20T08:47:50Z",
+      "service": "notifications-service",
+      "level": "WARN",
+      "trace_id": "trace-scenario-027-4",
+      "message": "notifications-service slow response from dependency",
+      "context": null
+    },
+    {
+      "id": 189,
+      "timestamp": "2025-01-20T08:47:56Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 190,
+      "timestamp": "2025-01-20T08:48:08Z",
+      "service": "db-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "db-service processed batch job",
+      "context": null
+    },
+    {
+      "id": 191,
+      "timestamp": "2025-01-20T08:48:16Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 192,
+      "timestamp": "2025-01-20T08:48:24Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 193,
+      "timestamp": "2025-01-20T08:48:33Z",
+      "service": "cache-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-1",
+      "message": "cache-service heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 194,
+      "timestamp": "2025-01-20T08:48:47Z",
+      "service": "notifications-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "notifications-service refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 195,
+      "timestamp": "2025-01-20T08:48:52Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "checkout-web completed background task",
+      "context": null
+    },
+    {
+      "id": 196,
+      "timestamp": "2025-01-20T08:48:57Z",
+      "service": "auth-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-3",
+      "message": "auth-service healthcheck OK",
+      "context": null
+    },
+    {
+      "id": 197,
+      "timestamp": "2025-01-20T08:49:11Z",
+      "service": "auth-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "auth-service refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 198,
+      "timestamp": "2025-01-20T08:49:15Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-1",
+      "message": "checkout-web ERROR transient network failure, retrying",
+      "context": null
+    },
+    {
+      "id": 199,
+      "timestamp": "2025-01-20T08:49:24Z",
+      "service": "db-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "db-service processed batch job",
+      "context": null
+    },
+    {
+      "id": 200,
+      "timestamp": "2025-01-20T08:49:27Z",
+      "service": "search-service",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "search-service retrying request to upstream",
+      "context": null
+    },
+    {
+      "id": 201,
+      "timestamp": "2025-01-20T08:49:39Z",
+      "service": "auth-service",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "auth-service temporary spike in error rate, monitoring",
+      "context": null
+    },
+    {
+      "id": 202,
+      "timestamp": "2025-01-20T08:49:48Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api processed batch job",
+      "context": null
+    },
+    {
+      "id": 203,
+      "timestamp": "2025-01-20T08:49:56Z",
+      "service": "inventory-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-3",
+      "message": "inventory-service ERROR timeout talking to upstream service",
+      "context": null
+    },
+    {
+      "id": 204,
+      "timestamp": "2025-01-20T08:50:08Z",
+      "service": "search-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-2",
+      "message": "search-service refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 205,
+      "timestamp": "2025-01-20T08:50:13Z",
+      "service": "cache-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "cache-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 206,
+      "timestamp": "2025-01-20T08:50:26Z",
+      "service": "notifications-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-4",
+      "message": "notifications-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 207,
+      "timestamp": "2025-01-20T08:50:40Z",
+      "service": "queue-worker",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "queue-worker received intermittent 5xx from upstream",
+      "context": null
+    },
+    {
+      "id": 208,
+      "timestamp": "2025-01-20T08:50:50Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-1",
+      "message": "payments-api metrics flush complete",
+      "context": null
+    },
+    {
+      "id": 209,
+      "timestamp": "2025-01-20T08:50:55Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 210,
+      "timestamp": "2025-01-20T08:51:03Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-4",
+      "message": "queue-worker ERROR failed to acquire lock from cache",
+      "context": null
+    },
+    {
+      "id": 211,
+      "timestamp": "2025-01-20T08:51:06Z",
+      "service": "db-service",
+      "level": "WARN",
+      "trace_id": "trace-scenario-027-2",
+      "message": "db-service retrying request to upstream",
+      "context": null
+    },
+    {
+      "id": 212,
+      "timestamp": "2025-01-20T08:51:14Z",
+      "service": "search-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-3",
+      "message": "search-service refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 213,
+      "timestamp": "2025-01-20T08:51:28Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-3",
+      "message": "gateway heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 214,
+      "timestamp": "2025-01-20T08:51:41Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-3",
+      "message": "inventory-service refreshed configuration from store",
+      "context": null
+    },
+    {
+      "id": 215,
+      "timestamp": "2025-01-20T08:51:54Z",
+      "service": "gateway",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "gateway received intermittent 5xx from upstream",
+      "context": null
+    },
+    {
+      "id": 216,
+      "timestamp": "2025-01-20T08:52:03Z",
+      "service": "checkout-web",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "checkout-web slow response from dependency",
+      "context": null
+    },
+    {
+      "id": 217,
+      "timestamp": "2025-01-20T08:52:18Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api metrics flush complete",
+      "context": null
+    },
+    {
+      "id": 218,
+      "timestamp": "2025-01-20T08:52:24Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": "trace-scenario-027-2",
+      "message": "queue-worker heartbeat tick",
+      "context": null
+    },
+    {
+      "id": 219,
+      "timestamp": "2025-01-20T08:52:36Z",
+      "service": "gateway",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-027-2",
+      "message": "gateway ERROR failed to acquire lock from cache",
+      "context": null
+    },
+    {
+      "id": 220,
+      "timestamp": "2025-01-20T08:52:41Z",
+      "service": "queue-worker",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "queue-worker received intermittent 5xx from upstream",
+      "context": null
+    }
+  ]
+}

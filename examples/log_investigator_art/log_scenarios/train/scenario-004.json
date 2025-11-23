@@ -1,0 +1,279 @@
+{
+  "id": "scenario-004",
+  "incident_type": "db_connection_pool_exhaustion",
+  "severity": "high",
+  "incident_report": "Checkout errors around 04:00 UTC \u2013 multiple timeouts talking to the database.",
+  "time_hint": "2025-01-20T04:00:00Z",
+  "logs": [
+    {
+      "id": 4,
+      "timestamp": "2025-01-20T03:56:34Z",
+      "service": "cache-redis",
+      "level": "INFO",
+      "trace_id": "trace-scenario-004-2",
+      "message": "cache-redis handled request normally",
+      "context": null
+    },
+    {
+      "id": 14,
+      "timestamp": "2025-01-20T03:56:50Z",
+      "service": "cache-redis",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "cache-redis handled request normally",
+      "context": null
+    },
+    {
+      "id": 19,
+      "timestamp": "2025-01-20T03:56:58Z",
+      "service": "orders-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "orders-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 5,
+      "timestamp": "2025-01-20T03:57:13Z",
+      "service": "orders-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "orders-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 7,
+      "timestamp": "2025-01-20T03:57:32Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "queue-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 1,
+      "timestamp": "2025-01-20T03:57:39Z",
+      "service": "orders-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "orders-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 12,
+      "timestamp": "2025-01-20T03:58:01Z",
+      "service": "cache-redis",
+      "level": "INFO",
+      "trace_id": "trace-scenario-004-2",
+      "message": "cache-redis handled request normally",
+      "context": null
+    },
+    {
+      "id": 26,
+      "timestamp": "2025-01-20T03:58:22Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-004-3",
+      "message": "checkout-web ERROR database connection pool exhausted, timeout acquiring connection",
+      "context": null
+    },
+    {
+      "id": 10,
+      "timestamp": "2025-01-20T03:58:35Z",
+      "service": "inventory-service",
+      "level": "WARN",
+      "trace_id": "trace-scenario-004-3",
+      "message": "inventory-service observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 15,
+      "timestamp": "2025-01-20T03:58:47Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-004-1",
+      "message": "inventory-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 16,
+      "timestamp": "2025-01-20T03:58:48Z",
+      "service": "payments-api",
+      "level": "WARN",
+      "trace_id": "trace-scenario-004-2",
+      "message": "payments-api observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-01-20T03:59:30Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": "trace-scenario-004-1",
+      "message": "queue-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 20,
+      "timestamp": "2025-01-20T03:59:31Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api handled request normally",
+      "context": null
+    },
+    {
+      "id": 25,
+      "timestamp": "2025-01-20T03:59:37Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-004-2",
+      "message": "checkout-web ERROR database connection pool exhausted, timeout acquiring connection",
+      "context": null
+    },
+    {
+      "id": 29,
+      "timestamp": "2025-01-20T03:59:40Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-004-2",
+      "message": "checkout-web ERROR database connection pool exhausted, timeout acquiring connection",
+      "context": null
+    },
+    {
+      "id": 17,
+      "timestamp": "2025-01-20T03:59:45Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": "trace-scenario-004-3",
+      "message": "checkout-web handled request normally",
+      "context": null
+    },
+    {
+      "id": 9,
+      "timestamp": "2025-01-20T04:00:15Z",
+      "service": "db-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "db-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 22,
+      "timestamp": "2025-01-20T04:00:40Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-004-2",
+      "message": "checkout-web ERROR database connection pool exhausted, timeout acquiring connection",
+      "context": null
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-01-20T04:00:51Z",
+      "service": "inventory-service",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "inventory-service observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 21,
+      "timestamp": "2025-01-20T04:00:56Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-004-3",
+      "message": "checkout-web ERROR database connection pool exhausted, timeout acquiring connection",
+      "context": null
+    },
+    {
+      "id": 24,
+      "timestamp": "2025-01-20T04:01:17Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-004-3",
+      "message": "checkout-web ERROR database connection pool exhausted, timeout acquiring connection",
+      "context": null
+    },
+    {
+      "id": 30,
+      "timestamp": "2025-01-20T04:01:40Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-004-1",
+      "message": "checkout-web ERROR database connection pool exhausted, timeout acquiring connection",
+      "context": null
+    },
+    {
+      "id": 27,
+      "timestamp": "2025-01-20T04:01:43Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-004-1",
+      "message": "checkout-web ERROR database connection pool exhausted, timeout acquiring connection",
+      "context": null
+    },
+    {
+      "id": 18,
+      "timestamp": "2025-01-20T04:01:49Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "queue-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 11,
+      "timestamp": "2025-01-20T04:01:56Z",
+      "service": "auth-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "auth-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 13,
+      "timestamp": "2025-01-20T04:02:01Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-004-3",
+      "message": "inventory-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 23,
+      "timestamp": "2025-01-20T04:02:21Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-004-1",
+      "message": "checkout-web ERROR database connection pool exhausted, timeout acquiring connection",
+      "context": null
+    },
+    {
+      "id": 28,
+      "timestamp": "2025-01-20T04:02:26Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-004-3",
+      "message": "checkout-web ERROR database connection pool exhausted, timeout acquiring connection",
+      "context": null
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-01-20T04:04:24Z",
+      "service": "cache-redis",
+      "level": "WARN",
+      "trace_id": "trace-scenario-004-1",
+      "message": "cache-redis observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 8,
+      "timestamp": "2025-01-20T04:04:56Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": "trace-scenario-004-1",
+      "message": "queue-worker handled request normally",
+      "context": null
+    }
+  ]
+}

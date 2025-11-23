@@ -1,0 +1,279 @@
+{
+  "id": "scenario-009",
+  "incident_type": "tls_handshake_failure",
+  "severity": "low",
+  "incident_report": "External calls around 05:15 UTC fail TLS handshakes; users see generic 502 errors.",
+  "time_hint": "2025-01-20T05:15:00Z",
+  "logs": [
+    {
+      "id": 2,
+      "timestamp": "2025-01-20T05:12:14Z",
+      "service": "orders-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "orders-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 9,
+      "timestamp": "2025-01-20T05:12:28Z",
+      "service": "cache-redis",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "cache-redis handled request normally",
+      "context": null
+    },
+    {
+      "id": 19,
+      "timestamp": "2025-01-20T05:12:35Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": "trace-scenario-009-3",
+      "message": "gateway handled request normally",
+      "context": null
+    },
+    {
+      "id": 21,
+      "timestamp": "2025-01-20T05:13:07Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-009-3",
+      "message": "db-service ERROR TLS handshake failed with upstream dependency",
+      "context": null
+    },
+    {
+      "id": 27,
+      "timestamp": "2025-01-20T05:13:41Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-009-2",
+      "message": "db-service ERROR TLS handshake failed with upstream dependency",
+      "context": null
+    },
+    {
+      "id": 16,
+      "timestamp": "2025-01-20T05:14:04Z",
+      "service": "cache-redis",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "cache-redis handled request normally",
+      "context": null
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-01-20T05:14:05Z",
+      "service": "auth-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "auth-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 22,
+      "timestamp": "2025-01-20T05:14:13Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-009-2",
+      "message": "db-service ERROR TLS handshake failed with upstream dependency",
+      "context": null
+    },
+    {
+      "id": 23,
+      "timestamp": "2025-01-20T05:14:19Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-009-1",
+      "message": "db-service ERROR TLS handshake failed with upstream dependency",
+      "context": null
+    },
+    {
+      "id": 12,
+      "timestamp": "2025-01-20T05:14:49Z",
+      "service": "orders-worker",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "orders-worker observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 20,
+      "timestamp": "2025-01-20T05:15:39Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": "trace-scenario-009-2",
+      "message": "checkout-web handled request normally",
+      "context": null
+    },
+    {
+      "id": 29,
+      "timestamp": "2025-01-20T05:15:42Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-009-3",
+      "message": "db-service ERROR TLS handshake failed with upstream dependency",
+      "context": null
+    },
+    {
+      "id": 11,
+      "timestamp": "2025-01-20T05:15:48Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "queue-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 14,
+      "timestamp": "2025-01-20T05:15:53Z",
+      "service": "db-service",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "db-service observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 25,
+      "timestamp": "2025-01-20T05:15:53Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-009-3",
+      "message": "db-service ERROR TLS handshake failed with upstream dependency",
+      "context": null
+    },
+    {
+      "id": 26,
+      "timestamp": "2025-01-20T05:16:23Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-009-3",
+      "message": "db-service ERROR TLS handshake failed with upstream dependency",
+      "context": null
+    },
+    {
+      "id": 15,
+      "timestamp": "2025-01-20T05:16:26Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway handled request normally",
+      "context": null
+    },
+    {
+      "id": 18,
+      "timestamp": "2025-01-20T05:16:30Z",
+      "service": "cache-redis",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "cache-redis observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 17,
+      "timestamp": "2025-01-20T05:17:00Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api handled request normally",
+      "context": null
+    },
+    {
+      "id": 24,
+      "timestamp": "2025-01-20T05:17:00Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-009-2",
+      "message": "db-service ERROR TLS handshake failed with upstream dependency",
+      "context": null
+    },
+    {
+      "id": 8,
+      "timestamp": "2025-01-20T05:17:05Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": "trace-scenario-009-3",
+      "message": "gateway handled request normally",
+      "context": null
+    },
+    {
+      "id": 30,
+      "timestamp": "2025-01-20T05:17:09Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-009-3",
+      "message": "db-service ERROR TLS handshake failed with upstream dependency",
+      "context": null
+    },
+    {
+      "id": 28,
+      "timestamp": "2025-01-20T05:17:33Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-009-2",
+      "message": "db-service ERROR TLS handshake failed with upstream dependency",
+      "context": null
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-01-20T05:17:52Z",
+      "service": "checkout-web",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "checkout-web observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-01-20T05:18:16Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "checkout-web handled request normally",
+      "context": null
+    },
+    {
+      "id": 13,
+      "timestamp": "2025-01-20T05:18:21Z",
+      "service": "auth-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "auth-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 1,
+      "timestamp": "2025-01-20T05:18:30Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": "trace-scenario-009-3",
+      "message": "gateway handled request normally",
+      "context": null
+    },
+    {
+      "id": 7,
+      "timestamp": "2025-01-20T05:18:30Z",
+      "service": "orders-worker",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "orders-worker observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 10,
+      "timestamp": "2025-01-20T05:18:40Z",
+      "service": "auth-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-009-2",
+      "message": "auth-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 5,
+      "timestamp": "2025-01-20T05:19:25Z",
+      "service": "cache-redis",
+      "level": "INFO",
+      "trace_id": "trace-scenario-009-1",
+      "message": "cache-redis handled request normally",
+      "context": null
+    }
+  ]
+}

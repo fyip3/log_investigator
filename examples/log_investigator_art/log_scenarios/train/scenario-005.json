@@ -1,0 +1,279 @@
+{
+  "id": "scenario-005",
+  "incident_type": "third_party_gateway_rate_limit",
+  "severity": "medium",
+  "incident_report": "Payment attempts around 04:15 UTC intermittently fail; logs mention rate limiting from gateway.",
+  "time_hint": "2025-01-20T04:15:00Z",
+  "logs": [
+    {
+      "id": 5,
+      "timestamp": "2025-01-20T04:10:00Z",
+      "service": "orders-worker",
+      "level": "INFO",
+      "trace_id": "trace-scenario-005-3",
+      "message": "orders-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 14,
+      "timestamp": "2025-01-20T04:10:05Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": "trace-scenario-005-3",
+      "message": "checkout-web handled request normally",
+      "context": null
+    },
+    {
+      "id": 16,
+      "timestamp": "2025-01-20T04:12:04Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway handled request normally",
+      "context": null
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-01-20T04:12:58Z",
+      "service": "orders-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "orders-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-01-20T04:13:16Z",
+      "service": "cache-redis",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "cache-redis observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 22,
+      "timestamp": "2025-01-20T04:13:39Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-005-3",
+      "message": "db-service ERROR received 429 rate limit from payment gateway",
+      "context": null
+    },
+    {
+      "id": 26,
+      "timestamp": "2025-01-20T04:13:41Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-005-1",
+      "message": "db-service ERROR received 429 rate limit from payment gateway",
+      "context": null
+    },
+    {
+      "id": 10,
+      "timestamp": "2025-01-20T04:13:50Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-005-1",
+      "message": "inventory-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 27,
+      "timestamp": "2025-01-20T04:14:17Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-005-1",
+      "message": "db-service ERROR received 429 rate limit from payment gateway",
+      "context": null
+    },
+    {
+      "id": 29,
+      "timestamp": "2025-01-20T04:14:18Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-005-3",
+      "message": "db-service ERROR received 429 rate limit from payment gateway",
+      "context": null
+    },
+    {
+      "id": 20,
+      "timestamp": "2025-01-20T04:14:43Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "queue-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 30,
+      "timestamp": "2025-01-20T04:14:49Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-005-1",
+      "message": "db-service ERROR received 429 rate limit from payment gateway",
+      "context": null
+    },
+    {
+      "id": 8,
+      "timestamp": "2025-01-20T04:14:50Z",
+      "service": "queue-worker",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "queue-worker observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 1,
+      "timestamp": "2025-01-20T04:15:07Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "queue-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 24,
+      "timestamp": "2025-01-20T04:15:19Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-005-2",
+      "message": "db-service ERROR received 429 rate limit from payment gateway",
+      "context": null
+    },
+    {
+      "id": 21,
+      "timestamp": "2025-01-20T04:15:20Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-005-2",
+      "message": "db-service ERROR received 429 rate limit from payment gateway",
+      "context": null
+    },
+    {
+      "id": 23,
+      "timestamp": "2025-01-20T04:15:26Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-005-1",
+      "message": "db-service ERROR received 429 rate limit from payment gateway",
+      "context": null
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-01-20T04:15:29Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": "trace-scenario-005-1",
+      "message": "gateway handled request normally",
+      "context": null
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-01-20T04:15:34Z",
+      "service": "cache-redis",
+      "level": "WARN",
+      "trace_id": "trace-scenario-005-1",
+      "message": "cache-redis observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 9,
+      "timestamp": "2025-01-20T04:15:43Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "checkout-web handled request normally",
+      "context": null
+    },
+    {
+      "id": 25,
+      "timestamp": "2025-01-20T04:15:43Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-005-3",
+      "message": "db-service ERROR received 429 rate limit from payment gateway",
+      "context": null
+    },
+    {
+      "id": 28,
+      "timestamp": "2025-01-20T04:16:16Z",
+      "service": "db-service",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-005-3",
+      "message": "db-service ERROR received 429 rate limit from payment gateway",
+      "context": null
+    },
+    {
+      "id": 11,
+      "timestamp": "2025-01-20T04:18:06Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": "trace-scenario-005-3",
+      "message": "checkout-web handled request normally",
+      "context": null
+    },
+    {
+      "id": 19,
+      "timestamp": "2025-01-20T04:18:06Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway handled request normally",
+      "context": null
+    },
+    {
+      "id": 13,
+      "timestamp": "2025-01-20T04:18:26Z",
+      "service": "cache-redis",
+      "level": "INFO",
+      "trace_id": "trace-scenario-005-3",
+      "message": "cache-redis handled request normally",
+      "context": null
+    },
+    {
+      "id": 18,
+      "timestamp": "2025-01-20T04:18:36Z",
+      "service": "cache-redis",
+      "level": "WARN",
+      "trace_id": "trace-scenario-005-1",
+      "message": "cache-redis observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 7,
+      "timestamp": "2025-01-20T04:18:43Z",
+      "service": "gateway",
+      "level": "WARN",
+      "trace_id": "trace-scenario-005-1",
+      "message": "gateway observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 15,
+      "timestamp": "2025-01-20T04:18:50Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "gateway handled request normally",
+      "context": null
+    },
+    {
+      "id": 17,
+      "timestamp": "2025-01-20T04:19:03Z",
+      "service": "queue-worker",
+      "level": "WARN",
+      "trace_id": "trace-scenario-005-2",
+      "message": "queue-worker observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 12,
+      "timestamp": "2025-01-20T04:19:49Z",
+      "service": "inventory-service",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "inventory-service observed slightly elevated latency",
+      "context": null
+    }
+  ]
+}

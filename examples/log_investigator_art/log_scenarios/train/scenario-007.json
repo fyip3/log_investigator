@@ -1,0 +1,279 @@
+{
+  "id": "scenario-007",
+  "incident_type": "message_queue_backlog",
+  "severity": "medium",
+  "incident_report": "Order confirmations delayed around 04:45 UTC; background jobs are lagging behind.",
+  "time_hint": "2025-01-20T04:45:00Z",
+  "logs": [
+    {
+      "id": 20,
+      "timestamp": "2025-01-20T04:40:14Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": "trace-scenario-007-1",
+      "message": "queue-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-01-20T04:41:28Z",
+      "service": "orders-worker",
+      "level": "INFO",
+      "trace_id": "trace-scenario-007-2",
+      "message": "orders-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 1,
+      "timestamp": "2025-01-20T04:42:36Z",
+      "service": "cache-redis",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "cache-redis handled request normally",
+      "context": null
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-01-20T04:43:06Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": "trace-scenario-007-2",
+      "message": "gateway handled request normally",
+      "context": null
+    },
+    {
+      "id": 24,
+      "timestamp": "2025-01-20T04:43:06Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-007-3",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 17,
+      "timestamp": "2025-01-20T04:43:09Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "inventory-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 9,
+      "timestamp": "2025-01-20T04:43:15Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "checkout-web handled request normally",
+      "context": null
+    },
+    {
+      "id": 16,
+      "timestamp": "2025-01-20T04:43:17Z",
+      "service": "db-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "db-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 19,
+      "timestamp": "2025-01-20T04:43:18Z",
+      "service": "orders-worker",
+      "level": "INFO",
+      "trace_id": "trace-scenario-007-2",
+      "message": "orders-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 28,
+      "timestamp": "2025-01-20T04:43:26Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-007-2",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 30,
+      "timestamp": "2025-01-20T04:43:33Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-007-2",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 22,
+      "timestamp": "2025-01-20T04:44:04Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-007-3",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-01-20T04:44:34Z",
+      "service": "db-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "db-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-01-20T04:44:36Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": "trace-scenario-007-3",
+      "message": "queue-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 15,
+      "timestamp": "2025-01-20T04:44:37Z",
+      "service": "orders-worker",
+      "level": "INFO",
+      "trace_id": "trace-scenario-007-3",
+      "message": "orders-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 8,
+      "timestamp": "2025-01-20T04:44:42Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "queue-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 18,
+      "timestamp": "2025-01-20T04:44:43Z",
+      "service": "queue-worker",
+      "level": "WARN",
+      "trace_id": "trace-scenario-007-1",
+      "message": "queue-worker observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 25,
+      "timestamp": "2025-01-20T04:45:25Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-007-2",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 7,
+      "timestamp": "2025-01-20T04:45:48Z",
+      "service": "orders-worker",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "orders-worker observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 27,
+      "timestamp": "2025-01-20T04:45:54Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-007-1",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 13,
+      "timestamp": "2025-01-20T04:46:17Z",
+      "service": "gateway",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "gateway observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 12,
+      "timestamp": "2025-01-20T04:46:54Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "inventory-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 29,
+      "timestamp": "2025-01-20T04:47:04Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-007-1",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 26,
+      "timestamp": "2025-01-20T04:47:05Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-007-2",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 23,
+      "timestamp": "2025-01-20T04:47:11Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-007-1",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 14,
+      "timestamp": "2025-01-20T04:47:15Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": "trace-scenario-007-2",
+      "message": "queue-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 21,
+      "timestamp": "2025-01-20T04:47:43Z",
+      "service": "queue-worker",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-007-2",
+      "message": "queue-worker ERROR processing backlog, queue length above threshold",
+      "context": null
+    },
+    {
+      "id": 10,
+      "timestamp": "2025-01-20T04:48:20Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "queue-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 11,
+      "timestamp": "2025-01-20T04:48:22Z",
+      "service": "gateway",
+      "level": "INFO",
+      "trace_id": "trace-scenario-007-1",
+      "message": "gateway handled request normally",
+      "context": null
+    },
+    {
+      "id": 5,
+      "timestamp": "2025-01-20T04:49:43Z",
+      "service": "cache-redis",
+      "level": "INFO",
+      "trace_id": "trace-scenario-007-2",
+      "message": "cache-redis handled request normally",
+      "context": null
+    }
+  ]
+}

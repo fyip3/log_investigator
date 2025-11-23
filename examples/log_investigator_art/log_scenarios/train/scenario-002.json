@@ -1,0 +1,279 @@
+{
+  "id": "scenario-002",
+  "incident_type": "kubernetes_pod_crashloop",
+  "severity": "low",
+  "incident_report": "Traffic errors around 03:30 UTC; pods for checkout-web keep restarting.",
+  "time_hint": "2025-01-20T03:30:00Z",
+  "logs": [
+    {
+      "id": 2,
+      "timestamp": "2025-01-20T03:25:11Z",
+      "service": "checkout-web",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "checkout-web observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 19,
+      "timestamp": "2025-01-20T03:26:00Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "inventory-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 11,
+      "timestamp": "2025-01-20T03:26:20Z",
+      "service": "checkout-web",
+      "level": "WARN",
+      "trace_id": "trace-scenario-002-1",
+      "message": "checkout-web observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-01-20T03:26:48Z",
+      "service": "orders-worker",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "orders-worker observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 7,
+      "timestamp": "2025-01-20T03:28:23Z",
+      "service": "auth-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "auth-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 15,
+      "timestamp": "2025-01-20T03:28:25Z",
+      "service": "orders-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "orders-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 27,
+      "timestamp": "2025-01-20T03:28:49Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-002-3",
+      "message": "checkout-web ERROR pod restarted due to OOMKilled",
+      "context": null
+    },
+    {
+      "id": 17,
+      "timestamp": "2025-01-20T03:28:50Z",
+      "service": "checkout-web",
+      "level": "INFO",
+      "trace_id": "trace-scenario-002-3",
+      "message": "checkout-web handled request normally",
+      "context": null
+    },
+    {
+      "id": 18,
+      "timestamp": "2025-01-20T03:28:55Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-002-3",
+      "message": "inventory-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 5,
+      "timestamp": "2025-01-20T03:29:29Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "queue-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-01-20T03:29:33Z",
+      "service": "db-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-002-1",
+      "message": "db-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 26,
+      "timestamp": "2025-01-20T03:29:37Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-002-1",
+      "message": "checkout-web ERROR pod restarted due to OOMKilled",
+      "context": null
+    },
+    {
+      "id": 10,
+      "timestamp": "2025-01-20T03:30:14Z",
+      "service": "inventory-service",
+      "level": "INFO",
+      "trace_id": "trace-scenario-002-3",
+      "message": "inventory-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 20,
+      "timestamp": "2025-01-20T03:30:38Z",
+      "service": "checkout-web",
+      "level": "WARN",
+      "trace_id": "trace-scenario-002-3",
+      "message": "checkout-web observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 16,
+      "timestamp": "2025-01-20T03:31:22Z",
+      "service": "gateway",
+      "level": "WARN",
+      "trace_id": "trace-scenario-002-1",
+      "message": "gateway observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 1,
+      "timestamp": "2025-01-20T03:31:30Z",
+      "service": "gateway",
+      "level": "WARN",
+      "trace_id": "trace-scenario-002-3",
+      "message": "gateway observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 29,
+      "timestamp": "2025-01-20T03:31:36Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-002-2",
+      "message": "checkout-web ERROR pod restarted due to OOMKilled",
+      "context": null
+    },
+    {
+      "id": 28,
+      "timestamp": "2025-01-20T03:31:40Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-002-2",
+      "message": "checkout-web ERROR pod restarted due to OOMKilled",
+      "context": null
+    },
+    {
+      "id": 30,
+      "timestamp": "2025-01-20T03:31:59Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-002-3",
+      "message": "checkout-web ERROR pod restarted due to OOMKilled",
+      "context": null
+    },
+    {
+      "id": 24,
+      "timestamp": "2025-01-20T03:32:02Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-002-1",
+      "message": "checkout-web ERROR pod restarted due to OOMKilled",
+      "context": null
+    },
+    {
+      "id": 25,
+      "timestamp": "2025-01-20T03:32:02Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-002-2",
+      "message": "checkout-web ERROR pod restarted due to OOMKilled",
+      "context": null
+    },
+    {
+      "id": 21,
+      "timestamp": "2025-01-20T03:32:08Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-002-1",
+      "message": "checkout-web ERROR pod restarted due to OOMKilled",
+      "context": null
+    },
+    {
+      "id": 14,
+      "timestamp": "2025-01-20T03:32:13Z",
+      "service": "inventory-service",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "inventory-service observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 22,
+      "timestamp": "2025-01-20T03:32:36Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-002-1",
+      "message": "checkout-web ERROR pod restarted due to OOMKilled",
+      "context": null
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-01-20T03:32:44Z",
+      "service": "payments-api",
+      "level": "WARN",
+      "trace_id": null,
+      "message": "payments-api observed slightly elevated latency",
+      "context": null
+    },
+    {
+      "id": 23,
+      "timestamp": "2025-01-20T03:32:52Z",
+      "service": "checkout-web",
+      "level": "ERROR",
+      "trace_id": "trace-scenario-002-3",
+      "message": "checkout-web ERROR pod restarted due to OOMKilled",
+      "context": null
+    },
+    {
+      "id": 9,
+      "timestamp": "2025-01-20T03:33:20Z",
+      "service": "payments-api",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "payments-api handled request normally",
+      "context": null
+    },
+    {
+      "id": 12,
+      "timestamp": "2025-01-20T03:34:05Z",
+      "service": "auth-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "auth-service handled request normally",
+      "context": null
+    },
+    {
+      "id": 8,
+      "timestamp": "2025-01-20T03:34:12Z",
+      "service": "queue-worker",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "queue-worker handled request normally",
+      "context": null
+    },
+    {
+      "id": 13,
+      "timestamp": "2025-01-20T03:34:22Z",
+      "service": "auth-service",
+      "level": "INFO",
+      "trace_id": null,
+      "message": "auth-service handled request normally",
+      "context": null
+    }
+  ]
+}
