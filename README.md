@@ -2,7 +2,8 @@
 [Detailed Design Doc](https://docs.google.com/document/d/1AqO-vcmYFUWDHxDJMe3qmtmxWTnqByCnfKXvzhINZTU/edit?usp=sharing)
 ## Overview
 
-<img width="800" height="145" alt="image" src="https://github.com/user-attachments/assets/37bc37a4-4078-4493-9b6f-29527337716b" />
+![log_inv](https://github.com/user-attachments/assets/9d0b25e1-3ab7-4311-b03a-862993f3205b)
+
 
 This project trains an incident‑investigation agent using the ART framework.  
 The agent receives a vague incident scenario and must investigate structured logs using two tools:
