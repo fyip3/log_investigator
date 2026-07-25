@@ -1,5 +1,5 @@
 # Log Investigator
-[Detailed Design Doc](https://docs.google.com/document/d/1AqO-vcmYFUWDHxDJMe3qmtmxWTnqByCnfKXvzhINZTU/edit?usp=sharing)
+[Research Paper](https://drive.google.com/file/d/11_ox0IBQt1w8Hkdq4TB-5lDH3bZrjOhI/view?usp=sharing)
 ## Overview
 
 ![log_inv](https://github.com/user-attachments/assets/9d0b25e1-3ab7-4311-b03a-862993f3205b)
